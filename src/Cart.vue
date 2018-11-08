@@ -1,13 +1,12 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <p>cart</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'Cart'
 }
 </script>
 
