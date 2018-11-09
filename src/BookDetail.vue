@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-      <router-view/>
+    <p>bookDetail</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'BookDetail'
 }
 </script>
 
@@ -18,20 +18,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-  .tabs {
-    width: 100%;
-    background: #ccc;
-    height: 80px;
-    line-height: 80px;
-  }
-.tabs ul {
-  clear: both;
-}
-.tabs li {
-  float: left;
-  min-width: 120px;
-  cursor: pointer;
-  color: blue;
 }
 </style>
