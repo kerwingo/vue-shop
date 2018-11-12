@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <p>main</p>
     <div class="tabs">
       <ul>
@@ -20,12 +20,23 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.tabs {
+  width: 100%;
+  background: #ccc;
+  height: 30px;
+  line-height: 30px;
+  position: fixed;
+  bottom: 0;
+  left:0
+}
+.tabs ul {
+  clear: both;
+  overflow: hidden;
+}
+.tabs li {
+  float: left;
+  min-width: 25%;
+  cursor: pointer;
+  color: blue;
 }
 </style>
