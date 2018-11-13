@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Login from '@/login.vue'
 import Main from '@/Main.vue'
 import Explorer from '@/Explorer.vue'
 import Home from '@/Home.vue'
@@ -15,7 +16,12 @@ export default new Router({
   linkActiveClass: 'active',
   routes: [
     {
-      path: '/',
+      path:'/',
+      name: 'Login',
+      component: 'Login',
+    },
+    {
+      path: '/main',
       name: 'Main',
       component: Main,
       children: [
