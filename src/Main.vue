@@ -1,6 +1,8 @@
 <template>
   <div>
-    <p>main</p>
+    <p v-show="$store.state.dialog.show">main</p>
+    <p>{{$store.state.me}}</p>
+    <t-dialog :number="12341156" ><input type="text" ></t-dialog>
     <div class="tabs">
       <ul>
         <router-link :to="{ name :'Home'}" tag="li">主页</router-link>
@@ -14,8 +16,22 @@
 </template>
 
 <script>
-export default {
-  name: 'Main'
+  import Me from './Me.vue'
+  import {mapGetters} from 'vuex'
+  export default {
+  name: 'Main',
+  components:{
+    "t-dialog":Me
+  },
+  computed:{
+    ...mapGetters([
+      'announcements',
+      'promotions',
+      'recommended',
+      'promotionCount',
+      'recommendedCount',
+    ]),
+  }
 }
 </script>
 

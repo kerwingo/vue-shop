@@ -3,22 +3,19 @@
 	  	<transition name="form-fade" mode="in-out">
 	  		<section class="form_contianer" v-show="showLogin">
 		  		<div class="manage_tip">
-		  			<p>elm后台管理系统</p>
+		  			<p>NineBaas-CMS</p>
 		  		</div>
 		    	<el-form :model="loginForm" :rules="rules" ref="loginForm">
 					<el-form-item prop="username">
-						<el-input v-model="loginForm.username" placeholder="用户名"><span>dsfsf</span></el-input>
+						<el-input v-model="loginForm.username" placeholder="用户名"><span></span></el-input>
 					</el-form-item>
 					<el-form-item prop="password">
 						<el-input type="password" placeholder="密码" v-model="loginForm.password"></el-input>
 					</el-form-item>
 					<el-form-item>
-				    	<el-button type="primary" @click="submitForm('loginForm')" class="submit_btn">登陆</el-button>
+				    	<el-button type="primary" @click="submitForm('loginForm')" class="submit_btn">登录</el-button>
 				  	</el-form-item>
 				</el-form>
-				<p class="tip">温馨提示：</p>
-				<p class="tip">未登录过的新用户，自动注册</p>
-				<p class="tip">注册过的用户可凭账号密码登录</p>
 	  		</section>
 	  	</transition>
   	</div>
@@ -66,7 +63,7 @@
 		                        type: 'success',
 		                        message: '登录成功'
 		                    });
-							this.$router.push('manage')
+							this.$router.push('Main')
 						}else{
 							this.$message({
 		                        type: 'error',
@@ -91,7 +88,7 @@
                         type: 'success',
                         message: '检测到您之前登录过，将自动登录'
                     });
-					this.$router.push('manage')
+					this.$router.push('Main')
 				}
 			}
 		}
@@ -99,7 +96,7 @@
 </script>
 
 <style lang="less" scoped>
-	@import './style/mixin';
+	@import './style/mixin.less';
 	.login_page{
 		background-color: #324057;
 	}
@@ -114,8 +111,8 @@
 		}
 	}
 	.form_contianer{
-		.wh(320px, 210px);
-		.ctp(320px, 210px);
+		.wh(320px, 170px);
+		.ctp(320px, 170px);
 		padding: 25px;
 		border-radius: 5px;
 		text-align: center;

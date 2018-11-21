@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="fillcontain">
       <router-view/>
   </div>
 </template>
@@ -11,6 +11,7 @@ export default {
 </script>
 
 <style>
+  @import './style/common.less';
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
